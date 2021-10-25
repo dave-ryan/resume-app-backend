@@ -7,3 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # testing pull request
+
+# rails g model Skill skill_name:string
+# rails g model Project name:string description:text url:string screenshot:string
