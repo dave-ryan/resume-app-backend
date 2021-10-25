@@ -3,3 +3,4 @@ class PercyController < ApplicationController
     render json: { message: "Test for pulling code." }
   end
 end
+
