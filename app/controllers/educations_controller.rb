@@ -1,5 +1,5 @@
 class EducationsController < ApplicationController
-  before before_action :authenticate_current_user
+  before_action :authenticate_user
 
   def index
     educations = Education.all
@@ -18,7 +18,7 @@ class EducationsController < ApplicationController
       degree: params[:degree],
       university_name: params[:university_name],
       details: params[:details],
-      student_id: current_user.student_id,
+      student_id: current_user.id,
     )
     if education.save
       render json: education

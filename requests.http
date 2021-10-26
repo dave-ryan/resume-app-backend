@@ -3,65 +3,62 @@ GET HTTP://localhost:3000/students
 
 
 ### Creates a new experience
-POST http://localhost:3000/experiences.json
-Content-Type: application/json
+  POST http://localhost:3000/experiences.json
+  Content-Type: application/json
+  Authorization: Bearer {{jwt}}
 
-{
+
+  {
   "start_date": "2000-06-01",
   "end_date": "2000-10-01",
-  "job_title": "Test title 2",
+  "job_title": "Test title 3",
   "company_name": "Test company",
-  "details": "test",
-  "student_id": 1
+  "details": "Testing current_user.id"
 
 }
 
-
 ### Updates experience
-PATCH http://localhost:3000/experiences/5.json
-Content-Type: application/json
+  PATCH http://localhost:3000/experiences/5.json
+  Content-Type: application/json
 
-{
+  {
   "job_title": "A New Job Title",
   "company_name": "This is a better company"
 }
 
-
 ### Deletes experience
-DELETE http://localhost:3000/experiences/4.json
-Content-Type: application/json
+  DELETE http://localhost:3000/experiences/4.json
+  Content-Type: application/json
 
 
 ### Creates a new education
-POST http://localhost:3000/educations.json
-Content-Type: application/json
+  POST http://localhost:3000/educations.json
+  Content-Type: application/json
+  Authorization: Bearer {{jwt}}
 
-{
+  {
   "start_date": "2000-06-01",
   "end_date": "2000-10-01",
-  "degree": "Fake Degree",
+  "degree": "Fake Degree3",
   "university_name": "Test University",
-  "details": "test",
-  "student_id": 1
+  "details": "Current User Test"
 
 }
 
-
 ### Updates education
-PATCH http://localhost:3000/educations/4.json
-Content-Type: application/json
+  PATCH http://localhost:3000/educations/4.json
+  Content-Type: application/json
 
-{
+  {
   "degree": "Best degree",
   "university_name": "Test"
 }
 
-
 ### Deletes education
-DELETE http://localhost:3000/educations/4.json
-Content-Type: application/json
+  DELETE http://localhost:3000/educations/4.json
+  Content-Type: application/json
 @host = http://localhost:3000
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50X2lkIjo1LCJleHAiOjE2MzUzNTQyNzR9.SWk2QimulTbUSUgr21e0iOaSIMCSX4iQWa2Dbd5J0PA
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50X2lkIjo2LCJleHAiOjE2MzUzNTYyMjd9.Ok5U45UG8_zP8bbg8Ny2zowvSHMBoqOSQiYmEYRgw6M
 
 
 ### SESSIONS CREATE
