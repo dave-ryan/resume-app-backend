@@ -6,6 +6,49 @@ get http://localhost:3000/skills/2
 ### skill create
 post http://localhost:3000/skills
 Content-Type: application/json
+@host = http://localhost:3000
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50X2lkIjo1LCJleHAiOjE2MzUzNTQyNzR9.SWk2QimulTbUSUgr21e0iOaSIMCSX4iQWa2Dbd5J0PA
+### SESSIONS CREATE
+POST {{host}}/sessions.json
+Content-Type: application/json
+
+{
+  "email": "test2",
+  "password": "test2"
+}
+
+#students
+### STUDENTS INDEX
+GET {{host}}/students
+### STUDENTS FIND
+GET {{host}}/students/2.json
+### STUDENTS CREATE
+POST {{host}}/students
+Content-Type: application/json
+
+{
+  "first_name": "test2",
+   "last_name": "test2",
+   "email": "test2",
+   "password": "test2",
+   "short_bio": "test2",
+   "linkedin_url": "test2",
+   "twitter_handle": "test2",
+   "personal_blog": "test2",
+   "online_resume_url": "test2",
+   "github_url": "test2",
+   "photo": "test",
+   "phone_number" : "test"
+}
+### STUDENTS UPDATE
+PATCH {{host}}/students/4.json
+Content-Type: application/json
+
+{
+  "first_name": "David"
+}
+### STUDENTS DELETE
+DELETE {{host}}/students/4.json
 
 {
   "skill_name": "JavaSctipt"
