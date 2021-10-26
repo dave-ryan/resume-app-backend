@@ -78,8 +78,8 @@ POST {{host}}/sessions.json
 Content-Type: application/json
 
 {
-  "email": "test2",
-  "password": "test2"
+  "email": "test3",
+  "password": "test3"
 }
 
 #students
@@ -92,13 +92,13 @@ POST {{host}}/students
 Content-Type: application/json
 
 {
-  "first_name": "test2",
-   "last_name": "test2",
-   "email": "test2",
-   "password": "test2",
-   "short_bio": "test2",
-   "linkedin_url": "test2",
-   "twitter_handle": "test2",
+  "first_name": "test3",
+   "last_name": "test3",
+   "email": "test3",
+   "password": "test3",
+   "short_bio": "test3",
+   "linkedin_url": "test3",
+   "twitter_handle": "test3",
    "personal_blog": "test2",
    "online_resume_url": "test2",
    "github_url": "test2",
