@@ -30,3 +30,33 @@ Content-Type: application/json
 ### Deletes experience
 DELETE http://localhost:3000/experiences/4.json
 Content-Type: application/json
+
+
+### Creates a new education
+POST http://localhost:3000/educations.json
+Content-Type: application/json
+
+{
+  "start_date": "2000-06-01",
+  "end_date": "2000-10-01",
+  "degree": "Fake Degree",
+  "university_name": "Test University",
+  "details": "test",
+  "student_id": 1
+
+}
+
+
+### Updates education
+PATCH http://localhost:3000/educations/4.json
+Content-Type: application/json
+
+{
+  "degree": "Best degree",
+  "university_name": "Test"
+}
+
+
+### Deletes education
+DELETE http://localhost:3000/educations/4.json
+Content-Type: application/json
