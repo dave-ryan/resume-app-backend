@@ -1,2 +1,33 @@
-GET HTTP://localhost:3000/students
+@host = http://localhost:3000
+#students
+### STUDENTS INDEX
+GET {{host}}/students
+### STUDENTS FIND
+GET {{host}}/students/2.json
+### STUDENTS CREATE
+POST {{host}}/students
+Content-Type: application/json
 
+{
+  "first_name": "test",
+   "last_name": "test",
+   "email": "test",
+   "password_digest": "test",
+   "short_bio": "test",
+   "linkedin_url": "test",
+   "twitter_handle": "test",
+   "personal_blog": "test",
+   "online_resume_url": "test",
+   "github_url": "test",
+   "photo": "test",
+   "phone_number" : "test"
+}
+### STUDENTS UPDATE
+PATCH {{host}}/students/4.json
+Content-Type: application/json
+
+{
+  "first_name": "David"
+}
+### STUDENTS DELETE
+DELETE {{host}}/students/4.json
