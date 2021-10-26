@@ -14,7 +14,7 @@ class StudentsController < ApplicationController
       first_name: params[:first_name],
       last_name: params[:last_name],
       email: params[:email],
-      password_digest: params[:password_digest],
+      password: params[:password],
       short_bio: params[:short_bio],
       linkedin_url: params[:linkedin_url],
       twitter_handle: params[:twitter_handle],
@@ -36,7 +36,7 @@ class StudentsController < ApplicationController
     student.first_name = params[:first_name] || student.first_name
     student.last_name = params[:last_name] || student.last_name
     student.email = params[:email] || student.email
-    student.password_digest = params[:password_digest] || student.password_digest
+    student.password = params[:password] || student.password_digest
     student.short_bio = params[:short_bio] || student.short_bio
     student.linkedin_url = params[:linkedin_url] || student.linkedin_url
     student.twitter_handle = params[:twitter_handle] || student.twitter_handle
