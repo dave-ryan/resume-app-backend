@@ -17,7 +17,7 @@ class SkillsController < ApplicationController
     if skill.save
       render json: post
     else
-      render json: { error: skills.errors.full_messages }, status: :bad_request
+      render json: { error: skill.errors.full_messages }, status: :bad_request
     end
   end
 
@@ -28,7 +28,7 @@ class SkillsController < ApplicationController
     if skill.save
       render json: skill
     else
-      render json: { errors: skills.errors.full_messages }, status: :bad_request
+      render json: { errors: skill.errors.full_messages }, status: :bad_request
     end
   end
 

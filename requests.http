@@ -1,2 +1,47 @@
 GET HTTP://localhost:3000/students
+### skill index
+get http://localhost:3000/skills
+### skill show
+get http://localhost:3000/skills/2
+### skill create
+post http://localhost:3000/skills
+Content-Type: application/json
 
+{
+  "skill_name": "JavaSctipt"
+}
+### skill update
+patch http://localhost:3000/skills/2
+Content-Type: application/json
+
+{
+  "skill_name": "JavaScript"
+}
+### skill destroy
+delete http://localhost:3000/skills/:2
+### project index
+get http://localhost:3000/projects
+### project show
+get http://localhost:3000/projects/2
+### project create
+post http://localhost:3000/projects
+Content-Type: application/json
+
+{
+  "name": "newProject",
+  "descripton": "learned some stuff",
+  "screenshot": "dfsafasdf",
+  "url": "dfaasdfadsfas"
+}
+### project updATE 
+patch http://localhost:3000/projects/4
+Content-Type: application/json
+
+{
+  "name": "updatedNewProject",
+  "description": "learned some stuff about computers",
+  "screnshot": "updatedNewProject.screenshot",
+  "url": "updatedNewProject.url"
+}
+### project Destrroy
+delete http://localhost:3000/projects/4
