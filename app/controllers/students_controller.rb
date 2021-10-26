@@ -57,4 +57,5 @@ class StudentsController < ApplicationController
     student.destroy
     render json: { message: "student account succesfully destroyed!" }
   end
+>>>>>>> 557dae282efcaf384d78c2bb797b15ec8b1bf467
 end
