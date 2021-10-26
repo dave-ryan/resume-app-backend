@@ -73,6 +73,7 @@ DELETE http://localhost:3000/educations/4.json
 Content-Type: application/json
 @host = http://localhost:3000
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50X2lkIjo1LCJleHAiOjE2MzUzNTQyNzR9.SWk2QimulTbUSUgr21e0iOaSIMCSX4iQWa2Dbd5J0PA
+###
 POST {{host}}/sessions.json
 Content-Type: application/json
 
