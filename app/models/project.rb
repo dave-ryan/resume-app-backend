@@ -1,3 +1,3 @@
 class Project < ApplicationRecord
-  belongs_to :Student
+  belongs_to :student
 end

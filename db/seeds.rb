@@ -10,3 +10,4 @@
 
 # rails g model Skill skill_name:string
 # rails g model Project name:string description:text url:string screenshot:string
+student = Student.create!(first_name: "Bob", last_name: "Johnson", email: "fake@test.com", password: "password", short_bio: "taslkdja", linkedin_url: "aslkdj", twitter_handle: "asldkjas", personal_blog: "alsdkj", phone_number: "123123", online_resume_url: "asldkjasldk", github_url: "asldkjasdklj", photo: "laksda")

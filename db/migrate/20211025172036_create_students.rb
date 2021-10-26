@@ -12,6 +12,7 @@ class CreateStudents < ActiveRecord::Migration[6.1]
       t.string :online_resume_url
       t.string :github_url
       t.string :photo
+      t.string :phone_number
 
       t.timestamps
     end

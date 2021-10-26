@@ -5,7 +5,7 @@ class CreateProjects < ActiveRecord::Migration[6.1]
       t.text :description
       t.string :url
       t.string :screenshot
-
+      t.integer :student_id
       t.timestamps
     end
   end
