@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get "/percy" => "percy#index"
+  get "/students" => "students#index"
 end
