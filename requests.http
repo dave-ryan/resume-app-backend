@@ -6,6 +6,11 @@ get http://localhost:3000/skills/2
 ### skill create
 post http://localhost:3000/skills
 Content-Type: application/json
+
+{
+  "skill_name": "JavaSctipt"
+}
+
 @host = http://localhost:3000
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50X2lkIjo1LCJleHAiOjE2MzUzNTQyNzR9.SWk2QimulTbUSUgr21e0iOaSIMCSX4iQWa2Dbd5J0PA
 ### SESSIONS CREATE
@@ -49,10 +54,6 @@ Content-Type: application/json
 }
 ### STUDENTS DELETE
 DELETE {{host}}/students/4.json
-
-{
-  "skill_name": "JavaSctipt"
-}
 ### skill update
 patch http://localhost:3000/skills/2
 Content-Type: application/json
@@ -69,6 +70,7 @@ get http://localhost:3000/projects/2
 ### project create
 post http://localhost:3000/projects
 Content-Type: application/json
+Authorization: Bearer: {{jwt}}
 
 {
   "name": "newProject",
