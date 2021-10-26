@@ -77,7 +77,7 @@ GET {{host}}/students
 ### STUDENTS FIND
 GET {{host}}/students/2.json
 ### STUDENTS CREATE
-POST {{host}}/students
+POST {{host}}/students.json
 Content-Type: application/json
 
 {
