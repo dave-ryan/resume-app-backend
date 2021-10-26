@@ -1,8 +1,6 @@
 class ExperiencesController < ApplicationController
   def index
-    experiences = Experience.All
+    experiences = Experience.all
     render json: experiences
   end
-
-  
 end

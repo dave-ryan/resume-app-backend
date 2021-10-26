@@ -1,6 +1,6 @@
 class EducationsController < ApplicationController
   def index
-    educations = Education.All
+    educations = Education.all
     render json: educations
   end
 end
