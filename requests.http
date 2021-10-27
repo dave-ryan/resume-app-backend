@@ -1,10 +1,10 @@
 @host = http://localhost:3000
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50X2lkIjo2LCJleHAiOjE2MzUzNTYyMjd9.Ok5U45UG8_zP8bbg8Ny2zowvSHMBoqOSQiYmEYRgw6M  
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50X2lkIjo2LCJleHAiOjE2MzUzNjQyMjZ9.Lx4hyjYhJZxhc6MUIFz_UJ5joQ2MJdmnnKCkN0p4E3E
 
 
-### Index for all students
-  GET HTTP://localhost:3000/students
-
+### Index for all experiences
+  GET HTTP://localhost:3000/experiences.json
+  Authorization: Bearer {{jwt}}
 
 ### Creates a new experience
   POST http://localhost:3000/experiences.json
@@ -22,8 +22,9 @@
 }
 
 ### Updates experience
-  PATCH http://localhost:3000/experiences/5.json
+  PATCH http://localhost:3000/experiences/7.json
   Content-Type: application/json
+  Authorization: Bearer {{jwt}}
 
   {
   "job_title": "A New Job Title",
@@ -33,6 +34,8 @@
 ### Deletes experience
   DELETE http://localhost:3000/experiences/4.json
   Content-Type: application/json
+  Authorization: Bearer {{jwt}}
+  
 
 
 ### Creates a new education
@@ -52,6 +55,8 @@
 ### Updates education
   PATCH http://localhost:3000/educations/4.json
   Content-Type: application/json
+  Authorization: Bearer {{jwt}}
+
 
   {
   "degree": "Best degree",
@@ -61,6 +66,8 @@
 ### Deletes education
   DELETE http://localhost:3000/educations/4.json
   Content-Type: application/json
+  Authorization: Bearer {{jwt}}
+
 
 
 
