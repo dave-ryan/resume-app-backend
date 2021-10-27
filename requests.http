@@ -3,170 +3,184 @@
 
 
 
-### skill index
-get http://localhost:3000/skills
-Authorization: Bearer {{jwt}}
-### skill show
-get http://localhost:3000/skills/2
-Authorization: Bearer {{jwt}}
-### skill create
-post http://localhost:3000/skills
-Authorization: Bearer {{jwt}}
-Content-Type: application/json
+### SKILL INDEX
+  get http://localhost:3000/skills
+  Authorization: Bearer {{jwt}}
 
-{
-  "skill_name": "JavaSctipt"
-}
+### SKILL SHOW
+  get http://localhost:3000/skills/2
+  Authorization: Bearer {{jwt}}
+### SKILL CREATE
 
-### Index for all students
+  post http://localhost:3000/skills.json
+  Content-Type: application/json
+  Authorization: Bearer {{jwt}}
 
+  {
+  "skill_name": "Typing"
+  }
 
-### Index for all students
-GET HTTP://localhost:3000/students
+### SKILL UPDATE
+  patch http://localhost:3000/skills/6
+  Authorization: Bearer {{jwt}}
+  Content-Type: application/json
 
+  {
+  "skill_name": "Typing really fast"
+  }
+### SKILL DESTROY
+  delete http://localhost:3000/skills/6
+  Authorization: Bearer {{jwt}}
 
-### Creates a new experience
-POST http://localhost:3000/experiences.json
-Content-Type: application/json
-Authorization: Bearer {{jwt}}
+### EXPERIENCE INDEX
+  GET {{host}}/experiences.json
+### EXPERIENCE SHOW
+  get {{host}}/experiences/1.json
+### EXPERIENCE CREATE
+  POST {{host}}/experiences.json
+  Content-Type: application/json
+  Authorization: Bearer {{jwt}}
 
+  {
+    "start_date": "2000-01-01",
+    "end_date": "2004-01-01",
+    "job_title": "Singer",
+    "company_name": "Test",
+    "detais": "N/A"
+  }
+  
+### EXPERIENCE UPDATE
+  PATCH http://localhost:3000/experiences/8.json
+  Authorization: Bearer {{jwt}}
+  Content-Type: application/json
 
-{
-  "start_date": "2000-06-01",
-  "end_date": "2000-10-01",
-  "job_title": "Test title 4",
-  "company_name": "Test company",
-  "details": "Testing current_user.id"
-
-}
-
-### Updates experience
-PATCH http://localhost:3000/experiences/5.json
-Content-Type: application/json
-
-{
+  {
   "job_title": "A New Job Title",
   "company_name": "This is a better company"
-}
+  }
 
-### Deletes experience
-DELETE http://localhost:3000/experiences/4.json
-Content-Type: application/json
+### EXPERIENCE DELETE
+  DELETE http://localhost:3000/experiences/8.json
+  Content-Type: application/json
+  Authorization: Bearer {{jwt}}
 
 
-### Creates a new education
-POST http://localhost:3000/educations.json
-Content-Type: application/json
-Authorization: Bearer {{jwt}}
+### EDUCATION INDEX
+  GET {{host}}/educations.json
 
-{
+### EDUCATION SHOW
+  GET {{host}}/educations/1.json
+
+### EDUCATION CREATE
+  POST http://localhost:3000/educations.json
+  Content-Type: application/json
+  Authorization: Bearer {{jwt}}
+
+  {
   "start_date": "2000-06-01",
   "end_date": "2000-10-01",
   "degree": "Fake Degree4",
-  "university_name": "Test University",
+  "university_name": "Test University5",
   "details": "Current User Test"
 
-}
+  }
 
-### Updates education
-PATCH http://localhost:3000/educations/4.json
-Content-Type: application/json
+### EDUCATION UPDATE
+  PATCH http://localhost:3000/educations/8
+  Authorization: Bearer {{jwt}}
+  Content-Type: application/json
 
-{
+  {
   "degree": "Best degree",
   "university_name": "Test"
-}
+  }
 
-### Deletes education
-DELETE http://localhost:3000/educations/4.json
-Content-Type: application/json
-###
-###
-POST {{host}}/sessions.json
-Content-Type: application/json
+### EDUCATION DELETE
+  DELETE http://localhost:3000/educations/8.json
+  Content-Type: application/json
+  Authorization: Bearer {{jwt}}
+
+
 
 
 ### SESSIONS CREATE
-POST {{host}}/sessions.json
-Content-Type: application/json
+  POST {{host}}/sessions.json
+  Content-Type: application/json
 
-{
+  {
   "email": "test3",
   "password": "test3"
-}
+  }
 
-#students
+
 ### STUDENTS INDEX
-GET {{host}}/students
-### STUDENTS FIND
-GET {{host}}/students/2.json
+  GET {{host}}/students
+### STUDENTS SHOW
+  GET {{host}}/students/2.json
 
 
 ### STUDENTS CREATE
-POST {{host}}/students.json
-Content-Type: application/json
 
-{
-"first_name": "test3",
-"last_name": "test3",
-"email": "test5",
-"password": "test3",
-"short_bio": "test3",
-"linkedin_url": "test3",
-"twitter_handle": "test3",
-"personal_blog": "test2",
-"online_resume_url": "test2",
-"github_url": "test2",
-"photo": "test",
-"phone_number" : "test"
-}
+  POST {{host}}/students.json
+  Content-Type: application/json
+
+  {
+  "first_name": "test4",
+  "last_name": "test4",
+  "email": "test4",
+  "password": "test4",
+  "short_bio": "test4",
+  "linkedin_url": "test4",
+  "twitter_handle": "test4",
+  "personal_blog": "test2",
+  "online_resume_url": "test2",
+  "github_url": "test2",
+  "photo": "test",
+  "phone_number" : "test"
+  }
+
+
 ### STUDENTS UPDATE
-PATCH {{host}}/students/4.json
-Content-Type: application/json
+  PATCH {{host}}/students/7.json
+  Content-Type: application/json
+  Authorization: Bearer {{jwt}}
 
-{
+
+  {
   "first_name": "David"
-}
+  }
 ### STUDENTS DELETE
-DELETE {{host}}/students/4.json
-### skill update
-patch http://localhost:3000/skills/2
-Authorization: Bearer {{jwt}}
-Content-Type: application/json
+  DELETE {{host}}/students/7.json
+  Authorization: Bearer {{jwt}}
 
-{
-  "skill_name": "JavaScript"
-}
-### skill destroy
-delete http://localhost:3000/skills/:2
-Authorization: Bearer {{jwt}}
-### project index
-get http://localhost:3000/projects
-Authorization: Bearer {{jwt}}
-### project show
-get http://localhost:3000/projects/2
-Authorization: Bearer {{jwt}}
-### project create
-post http://localhost:3000/projects.json
-Content-Type: application/json
-Authorization: Bearer {{jwt}}
 
-{
-  "name": "newProject",
-  "descripton": "learned some stuff",
+### PROJECT INDEX
+  get http://localhost:3000/projects
+  Authorization: Bearer {{jwt}}
+### PROJECT SHOW
+  get http://localhost:3000/projects/2
+### PROJECT CREATE
+  post http://localhost:3000/projects.json
+  Content-Type: application/json
+  Authorization: Bearer {{jwt}}
+
+  {
+  "name": "newProject2",
+  "description": "learned some stuff",
   "screenshot": "dfsafasdf",
   "url": "dfaasdfadsfas"
-}
-### project updATE 
-patch http://localhost:3000/projects/4
-Authorization: Bearer {{jwt}}
-Content-Type: application/json
-{ 
+  }
+### PROJECT UPDATE
+  patch http://localhost:3000/projects/4
+  Authorization: Bearer {{jwt}}
+  Content-Type: application/json
+  
+  { 
   "name": "updatedNewProject",
   "description": "learned some stuff about computers",
   "screnshot": "updatedNewProject.screenshot",
   "url": "updatedNewProject.url"
-}
-### project Destrroy
-delete http://localhost:3000/projects/4
-Authorization: Bearer {{jwt}}
+  }
+### PROJECT DESTROY
+  delete http://localhost:3000/projects/4
+  Authorization: Bearer {{jwt}}
