@@ -21,8 +21,8 @@ end
 end
 
 index = 1
-while index > 76
-  project = Project.create!(name: Faker::App.name, description: Faker::Hipster.sentences(number: 3), url: Faker::Internet.domain_name, screenshot: Faker::Placeholdit.image, student_id: rand(1..75))
+while index < 76
+  project = Project.create!(name: Faker::App.name, description: Faker::Hipster.sentences(number: 3), url: Faker::Internet.domain_name, screenshot: Faker::Placeholdit.image, student_id: index)
   index += 1
 end
 ###  some people get more projects
@@ -32,7 +32,7 @@ end
 
 index = 1
 while index < 76
-  skill = Skill.create!(skill_name: Faker::ProgrammingLanguage.name, student_id: rand(1..75))
+  skill = Skill.create!(skill_name: Faker::ProgrammingLanguage.name, student_id: index)
   index += 1
 end
 ### some people get more skills
