@@ -141,7 +141,7 @@
 
 
 ### STUDENTS UPDATE
-  PATCH {{host}}/students/7.json
+  PATCH {{host}}/students/8.json
   Content-Type: application/json
   Authorization: Bearer {{jwt}}
 
