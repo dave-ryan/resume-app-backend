@@ -142,7 +142,7 @@ delete http://localhost:3000/skills/:2
 Authorization: Bearer {{jwt}}
 ### project index
 get http://localhost:3000/projects
-Authorization: Bearer: {{jwt}}
+Authorization: Bearer {{jwt}}
 ### project show
 get http://localhost:3000/projects/2
 Authorization: Bearer {{jwt}}
