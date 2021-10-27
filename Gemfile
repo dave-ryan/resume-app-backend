@@ -6,6 +6,8 @@ ruby '3.0.1'
 #test
 gem 'active_model_serializers', '~> 0.10.0'
 
+gem 'faker'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
