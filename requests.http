@@ -34,7 +34,7 @@ Authorization: Bearer {{jwt}}
 {
   "start_date": "2000-06-01",
   "end_date": "2000-10-01",
-  "job_title": "Test title 3",
+  "job_title": "Test title 4",
   "company_name": "Test company",
   "details": "Testing current_user.id"
 
@@ -62,7 +62,7 @@ Authorization: Bearer {{jwt}}
 {
   "start_date": "2000-06-01",
   "end_date": "2000-10-01",
-  "degree": "Fake Degree3",
+  "degree": "Fake Degree4",
   "university_name": "Test University",
   "details": "Current User Test"
 
