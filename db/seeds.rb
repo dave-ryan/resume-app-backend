@@ -22,12 +22,12 @@ end
 
 index = 1
 while index < 76
-  project = Project.create!(name: Faker::App.name, description: Faker::Hipster.sentences(number: 3), url: Faker::Internet.domain_name, screenshot: Faker::Placeholdit.image, student_id: index)
+  project = Project.create!(name: Faker::App.name, description: Faker::Hipster.paragraph(sentence_count: 3), url: Faker::Internet.domain_name, screenshot: Faker::Placeholdit.image, student_id: index)
   index += 1
 end
 ###  some people get more projects
 40.times do
-  project = Project.create!(name: Faker::App.name, description: Faker::Hipster.sentences(number: 3), url: Faker::Internet.domain_name, screenshot: Faker::Placeholdit.image, student_id: rand(1..75))
+  project = Project.create!(name: Faker::App.name, description: Faker::Hipster.paragraph(sentence_count: 3), url: Faker::Internet.domain_name, screenshot: Faker::Placeholdit.image, student_id: rand(1..75))
 end
 
 index = 1
@@ -50,3 +50,12 @@ end
 40.times do
   experience = Experience.create!(start_date: Faker::Date.between(from: "2002-01-01", to: "2007-12-31"), end_date: Faker::Date.between(from: "2008-01-01", to: "2012-12-31"), job_title: Faker::Job.title, company_name: Faker::Company.name, details: Faker::Lorem.paragraph(sentence_count: 3), student_id: rand(1..75))
 end
+
+#admin for kiel
+admin = Student.new(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: "admin@test.com", password: "password", short_bio: Faker::Lorem.paragraph(sentence_count: 3), twitter_handle: Faker::Twitter.user[:name], phone_number: Faker::PhoneNumber.cell_phone, photo: "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/thinking-face_1f914.png")
+admin[:email] = Faker::Internet.unique.email(name: admin.first_name)
+admin[:linkedin_url] = "#{admin.first_name}.linkedin.com"
+admin[:personal_blog] = "#{admin.first_name}.blogspot.com"
+admin[:online_resume_url] = "#{admin.first_name}.resume.com"
+admin[:github_url] = "#{admin.first_name}.github.io"
+admin.save
