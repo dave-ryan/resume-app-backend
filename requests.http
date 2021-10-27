@@ -109,7 +109,7 @@ Content-Type: application/json
 {
 "first_name": "test3",
 "last_name": "test3",
-"email": "test3",
+"email": "test5",
 "password": "test3",
 "short_bio": "test3",
 "linkedin_url": "test3",
