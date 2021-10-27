@@ -11,10 +11,14 @@ Rails.application.routes.draw do
   get "/skills" => "skills#index"
   get "/skills/:id" => "skills#show"
   post "/skills" => "skills#create"
-  patch "/skills/:id" => "skills#upda†e"
+  patch "/skills/:id" => "skills#update"
   delete "/skills/:id" => "skills#destroy"
-  ### projects index
+  ### projects CRUD actions
   get "/projects" => "projects#index"
+  get "/projects/:id" => "projects#show"
+  post "/projects" => "projects#create"
+  patch "projects/:id" => "projects#update"
+  delete "projects/:id" => "projects#destroy"
   ###
   get "/experiences" => "experiences#index"
   get "/experiences/:id" => "experiences#show"
