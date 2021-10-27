@@ -5,7 +5,7 @@
 
 ### skill index
 get http://localhost:3000/skills
-Authorization: Bearer {{jwt}}
+
 ### skill show
 get http://localhost:3000/skills/2
 Authorization: Bearer {{jwt}}
