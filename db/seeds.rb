@@ -51,6 +51,7 @@ end
   experience = Experience.create!(start_date: Faker::Date.between(from: "2002-01-01", to: "2007-12-31"), end_date: Faker::Date.between(from: "2008-01-01", to: "2012-12-31"), job_title: Faker::Job.title, company_name: Faker::Company.name, details: Faker::Lorem.paragraph(sentence_count: 3), student_id: rand(1..75))
 end
 
+#admin for kiel
 admin = Student.new(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: "admin@test.com", password: "password", short_bio: Faker::Lorem.paragraph(sentence_count: 3), twitter_handle: Faker::Twitter.user[:name], phone_number: Faker::PhoneNumber.cell_phone, photo: "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/thinking-face_1f914.png")
 admin[:email] = Faker::Internet.unique.email(name: admin.first_name)
 admin[:linkedin_url] = "#{admin.first_name}.linkedin.com"
