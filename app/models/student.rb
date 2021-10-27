@@ -6,4 +6,10 @@ class Student < ApplicationRecord
   has_many :educations
   has_many :skills
   has_many :projects
+
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :password, presence: true
+  validates :short_bio, presence: true
+
 end

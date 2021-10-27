@@ -136,6 +136,7 @@
 
 
 ### STUDENTS CREATE
+
   POST {{host}}/students.json
   Content-Type: application/json
 
@@ -153,6 +154,8 @@
   "photo": "test",
   "phone_number" : "test"
   }
+
+
 ### STUDENTS UPDATE
   PATCH {{host}}/students/4.json
   Content-Type: application/json
