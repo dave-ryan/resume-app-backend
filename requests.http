@@ -5,8 +5,10 @@
 
 ### skill index
 get http://localhost:3000/skills
+Authorization: Bearer {{jwt}}
 ### skill show
 get http://localhost:3000/skills/2
+Authorization: Bearer {{jwt}}
 ### skill create
 post http://localhost:3000/skills
 Authorization: Bearer {{jwt}}
@@ -137,11 +139,13 @@ Content-Type: application/json
 }
 ### skill destroy
 delete http://localhost:3000/skills/:2
+Authorization: Bearer {{jwt}}
 ### project index
 get http://localhost:3000/projects
 Authorization: Bearer: {{jwt}}
 ### project show
 get http://localhost:3000/projects/2
+Authorization: Bearer {{jwt}}
 ### project create
 post http://localhost:3000/projects.json
 Content-Type: application/json
@@ -155,9 +159,8 @@ Authorization: Bearer {{jwt}}
 }
 ### project updATE 
 patch http://localhost:3000/projects/4
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
-DELETE {{host}}/students/4.json
-
 { 
   "name": "updatedNewProject",
   "description": "learned some stuff about computers",
@@ -166,3 +169,4 @@ DELETE {{host}}/students/4.json
 }
 ### project Destrroy
 delete http://localhost:3000/projects/4
+Authorization: Bearer {{jwt}}
