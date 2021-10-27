@@ -1,3 +1,8 @@
+@host = http://localhost:3000
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50X2lkIjo1LCJleHAiOjE2MzU0MzI2ODR9.oUnu7o6-ANQfYpTPDQCbx_Lj0KBGgeRg5MdAYgoe3MI 
+
+
+
 ### skill index
 get http://localhost:3000/skills
 ### skill show
@@ -13,20 +18,24 @@ Content-Type: application/json
 ### Index for all students
 
 
+### Index for all students
+GET HTTP://localhost:3000/students
+
+
 ### Creates a new experience
 POST http://localhost:3000/experiences.json
 Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
 
 {
   "start_date": "2000-06-01",
   "end_date": "2000-10-01",
-  "job_title": "Test title 2",
+  "job_title": "Test title 3",
   "company_name": "Test company",
-  "details": "test",
-  "student_id": 1
+  "details": "Testing current_user.id"
 
 }
-
 
 ### Updates experience
 PATCH http://localhost:3000/experiences/5.json
@@ -37,7 +46,6 @@ Content-Type: application/json
   "company_name": "This is a better company"
 }
 
-
 ### Deletes experience
 DELETE http://localhost:3000/experiences/4.json
 Content-Type: application/json
@@ -46,17 +54,16 @@ Content-Type: application/json
 ### Creates a new education
 POST http://localhost:3000/educations.json
 Content-Type: application/json
+Authorization: Bearer {{jwt}}
 
 {
   "start_date": "2000-06-01",
   "end_date": "2000-10-01",
-  "degree": "Fake Degree",
+  "degree": "Fake Degree3",
   "university_name": "Test University",
-  "details": "test",
-  "student_id": 1
+  "details": "Current User Test"
 
 }
-
 
 ### Updates education
 PATCH http://localhost:3000/educations/4.json
@@ -67,13 +74,16 @@ Content-Type: application/json
   "university_name": "Test"
 }
 
-
 ### Deletes education
 DELETE http://localhost:3000/educations/4.json
 Content-Type: application/json
-@host = http://localhost:3000
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJzdHVkZW50X2lkIjo1LCJleHAiOjE2MzUzNTQyNzR9.SWk2QimulTbUSUgr21e0iOaSIMCSX4iQWa2Dbd5J0PA
 ###
+###
+POST {{host}}/sessions.json
+Content-Type: application/json
+
+
+### SESSIONS CREATE
 POST {{host}}/sessions.json
 Content-Type: application/json
 
@@ -87,23 +97,25 @@ Content-Type: application/json
 GET {{host}}/students
 ### STUDENTS FIND
 GET {{host}}/students/2.json
+
+
 ### STUDENTS CREATE
-POST {{host}}/students
+POST {{host}}/students.json
 Content-Type: application/json
 
 {
-  "first_name": "test3",
-   "last_name": "test3",
-   "email": "test3",
-   "password": "test3",
-   "short_bio": "test3",
-   "linkedin_url": "test3",
-   "twitter_handle": "test3",
-   "personal_blog": "test2",
-   "online_resume_url": "test2",
-   "github_url": "test2",
-   "photo": "test",
-   "phone_number" : "test"
+"first_name": "test3",
+"last_name": "test3",
+"email": "test3",
+"password": "test3",
+"short_bio": "test3",
+"linkedin_url": "test3",
+"twitter_handle": "test3",
+"personal_blog": "test2",
+"online_resume_url": "test2",
+"github_url": "test2",
+"photo": "test",
+"phone_number" : "test"
 }
 ### STUDENTS UPDATE
 PATCH {{host}}/students/4.json
@@ -125,10 +137,11 @@ Content-Type: application/json
 delete http://localhost:3000/skills/:2
 ### project index
 get http://localhost:3000/projects
+Authorization: Bearer: {{jwt}}
 ### project show
 get http://localhost:3000/projects/2
 ### project create
-post http://localhost:3000/projects
+post http://localhost:3000/projects.json
 Content-Type: application/json
 Authorization: Bearer: {{jwt}}
 
@@ -141,6 +154,7 @@ Authorization: Bearer: {{jwt}}
 ### project updATE 
 patch http://localhost:3000/projects/4
 Content-Type: application/json
+DELETE {{host}}/students/4.json
 
 {
   "name": "updatedNewProject",

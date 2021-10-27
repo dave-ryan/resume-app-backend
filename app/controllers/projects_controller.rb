@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_action :authenticate_user
+
   def index
     projects = Project.all
     render json: projects
@@ -10,7 +12,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    project = Project.create!(
+    project = Project.new(
       name: params[:name],
       description: params[:description],
       url: params[:url],
@@ -20,7 +22,7 @@ class ProjectsController < ApplicationController
     if project.save
       render json: project
     else
-      render json: { errors: project.errors.full_messages }, status: :bad_request
+      render json: { errors: project.errors.full_messages }
     end
   end
 
